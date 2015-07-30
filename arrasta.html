@@ -1,0 +1,127 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    
+    <meta charset="utf-8">
+	
+	
+	
+	<h3>Os Campeões!</h3>
+    <div style=" width: 300px; height: 150px; margin: 0 auto; " >
+       
+        <div style="float: left; margin-left: 15px">
+            
+            <div style="margin-top: 40px;width: 70px;">Tito Paulo</div>
+            <div style="width: 70px;font-size: 40px; height: 70px; 
+                 background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+color: white;
+                 vertical-align: middle; text-align: center;
+                 border-color: #666; border-style: solid">2</div>
+            
+        </div>
+        <div style="float: left; margin-bottom: 2px;">
+            <div style="width: 70px;">Tito Paulo</div>
+            <div style="width: 70px; font-size: 40px;
+                 height: 110px; background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+                 color: white; text-align: center;border-color: #666; border-style: solid">1</div>
+            
+        </div>
+        <div style="float: left; margin-bottom: 2px;vertical-align: bottom">
+            <div style="margin-top: 60px; margin-left: 4px;width: 70px;">Tito Paulo</div>
+            <div style="width: 70px; font-size: 40px;height: 50px; 
+                 background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+ color: white;vertical-align: middle; 
+                 text-align: center;border-color: #666; border-style: solid">3</div>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+             
+        
+	
+	
+	
+	
+	
+	<style>
+	#draggable, #draggable2 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+	#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+	</style>
+	<script>
+	$(function() {
+		$( "#draggable" ).draggable({ revert: "valid" });
+		$( "#draggable2" ).draggable({ revert: "invalid" });
+
+		$( "#droppable" ).droppable({
+			activeClass: "ui-state-hover",
+			hoverClass: "ui-state-active",
+			drop: function( event, ui ) {
+				$( this )
+					.addClass( "ui-state-highlight" )
+					.find( "p" )
+						.html( "Dropped!" );
+			}
+		});
+	});
+	</script>
+
+
+
+<div class="demo">
+	
+<div id="draggable" class="ui-widget-content">
+	<p>I revert when I'm dropped</p>
+</div>
+
+<div id="draggable2" class="ui-widget-content">
+	<p>I revert when I'm not dropped</p>
+</div>
+
+<div id="droppable" class="ui-widget-header">
+	<p>Drop me here</p>
+</div>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>Return the draggable (or it's helper) to its original location when dragging stops with the boolean <code>revert</code> option set on the draggable.</p>
+</div><!-- End demo-description -->
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

@@ -2,7 +2,7 @@
 $host = getenv("OPENSHIFT_MYSQL_DB_HOST");
 $port = getenv("OPENSHIFT_MYSQL_DB_PORT");
 
-$conexao = mysql_connect($host . ":" . $port, "adminI4fDcIA", "r-rrAbGm1RHg") or die ("sem chance");
+$conexao = mysql_connect($host + ":" + $port, "adminI4fDcIA", "r-rrAbGm1RHg") or die ("sem chance");
 //  $conexao = mysql_connect("localhost", "user_banco", "emocao") or die ("sem chance");
    
  $db = mysql_select_db("banco_jogo") or die("erro ao conectar banco");

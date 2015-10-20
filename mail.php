@@ -9,14 +9,14 @@ $nome=$_POST['nome'];
 $mail=$_POST['mail'];
 
 $Titulo="[Sabedorama: $assunto]";
-$email="contato@sabedorama.com.br";
+$email="madatetalk@gmail.com";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // Additional headers
 
-$headers .= 'From: Sabedorama <contato@sabedorama.com.br>' . "\r\n";
+$headers .= 'From: Sabedorama <madatetalk@gmail.com>' . "\r\n";
 $men="
 <html>
 <head>

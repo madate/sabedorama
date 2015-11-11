@@ -1,15 +1,17 @@
 <?php
 ini_set("SMTP", "localhost");
-require 'conection.php';
-//require_once('PHPMailer_v5.1/class.phpmailer.php');
+//require 'conection.php';
 
+require_once('PHPMailer_v5.1/class.phpmailer.php');
+
+/*
 $msg=$_POST['msg'];
 $assunto=$_POST['assunto'];
 $nome=$_POST['nome'];
 $mail=$_POST['mail'];
 
 $Titulo="[Sabedorama: $assunto]";
-$email="madatetalk@gmail.com";
+$email="madate@hotmail.com";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -59,24 +61,43 @@ width:600px;
 
             echo"Devido a problemas tecnicos não enviado seu e-mail favor mandar manualmente.";
         }
-       /* $phpmail = new PHPMailer();
+*/
+/***--------------------------------------------------*/
+
+$msg=$_POST['msg'];
+$assunto=$_POST['assunto'];
+$nome=$_POST['nome'];
+$mail=$_POST['mail'];
+
+$Titulo="[Sabedorama: $assunto]";
+$email="madate@hotmail.com";
+
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+// Additional headers
+
+$headers .= 'From: Sabedorama <madatetalk@gmail.com>' . "\r\n";
+
+
+ $phpmail = new PHPMailer();
 
 
 
-      $phpmail->SetLanguage("br", "libs/");
+    $phpmail->SetLanguage("br", "libs/");
       
              
       
       
-       $phpmail->IsSMTP(); // envia por SMTP
+    $phpmail->IsSMTP(); // envia por SMTP
     $phpmail->Host = "smtp.gmail.com"; // SMTP servers
     $phpmail->SMTPDebug  = 1;
     $phpmail->SMTPSecure = "SSL"; // Configura o tipo de criptografia do SMTP do Gmail, no caso, SSL
     $phpmail->Port = 465; // Configura porta do servidor SMTP do Gmail
   
     $phpmail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
-     $phpmail->Username = "titogregox@gmail.com"; // SMTP username
-    $phpmail->Password = "naruto-81"; // SMTP password
+     $phpmail->Username = "sabedorama@gmail.com"; // SMTP username
+    $phpmail->Password = "33949440"; // SMTP password
 
         $phpmail->IsHTML(true);
         $phpmail->CharSet = "UTF-8";
@@ -85,7 +106,7 @@ width:600px;
         
          
           //$phpmail->AddAddress("contato@sabedorama.com.br"); 
-        $phpmail->AddAddress("titopsn@algartecnologia.com.br");
+        $phpmail->AddAddress("sabedorama@gmail.com");
         $phpmail->Subject = "[Sabedorama: $assunto]";
         // <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
         $phpmail->Body .= "
@@ -129,6 +150,5 @@ width:600px;
             echo"Devido a problemas tecnicos não enviado seu e-mail favor mandar manualmente.";
         }
    
-        * 
-        */
+
 ?> 
